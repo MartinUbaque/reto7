@@ -1,0 +1,123 @@
+/* Agrega estilos personalizados aquí */
+
+.quiz-image {
+    max-width: 100%;
+  }
+  
+  .character-card {
+    width: 18rem;
+    margin: 0 auto;
+  }
+  
+  .start-button {
+    margin: 20px 0;
+  }
+  
+  .options button {
+    width: 100%;
+  }
+
+  
+  .progress {
+    margin-top: 20px;
+  }
+  
+  .progress-bar {
+    font-size: 16px;
+  }
+  
+  .card-title {
+    font-size: 24px;
+  }
+  
+  /* Ajusta los estilos según tus preferencias */
+  .btn btn-primary mt-4{
+    color:#173a87;
+  }
+
+  .card{
+    align-items: center;
+    position:relative;
+    color:#173a87;
+    color-scheme: #173a87;
+    border-color: #173a87;
+  }
+  .box {
+    --clr-shadow__border: #174287;
+    --clr-text: #f2ebf6;
+    --clr-space: #120e1e;
+    --clr-space-gr: #1b1950;
+    --clr-star: #E9F8F9;
+    --size: 3rem;
+    position: relative;
+    outline: 0.5px solid var(--clr-shadow__border);
+    border-radius: 1rem;
+  }
+  
+  .button {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    background: transparent;
+    padding: calc(var(--size) / 3) var(--size);
+    border: none;
+    cursor: pointer;
+    color: var(--clr-text);
+    text-shadow: 2px 0px var(--clr-shadow__border), 0px 2px var(--clr-shadow__border),
+    -1px 0px var(--clr-shadow__border), 0px -1px var(--clr-shadow__border);
+  }
+  
+  .space {
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    gap: 1.5rem;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    background: linear-gradient( 160deg, var(--clr-space), var(--clr-space-gr));
+    border-radius: 1rem;
+  }
+  
+  .box:hover .space {
+    opacity: 1;
+  }
+  
+  .star {
+    height: 4rem;
+    width: 0.3rem;
+    transition: 0.5s;
+    border-radius: 50px;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    position: relative;
+    background-color: var(--clr-star);
+    animation: space-animation calc(0.1s * var(--i)) linear infinite;
+  }
+  
+  @keyframes space-animation {
+    0% {
+      transform: rotate(-30deg) translateY(calc(-52% * var(--i)));
+    }
+  
+    100% {
+      transform: rotate(-30deg) translateY(calc(52% * var(--i)));
+    }
+  }
+  
+  p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #173a87;
+  }
+  
+  .mb-4{
+    color: #173a87;
+  }
+  
+  
+  
+  
+  

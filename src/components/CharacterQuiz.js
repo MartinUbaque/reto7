@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FinalScore from './FinalScore'; // Import the new component
+import './CharacterQuiz.css';
 
 
 const CharacterQuiz = () => {
@@ -159,7 +160,9 @@ const CharacterQuiz = () => {
         <div>
         {QuestionCharacter  ?  (
           <div>
-            <div className="card mx-auto" style={{ width: '18rem' }}>
+            <div className="row">
+              <div className="col-md-6 d-flex align-items-center">
+            <div className="card mx-auto" style={{ width: '20rem'}} >
               <img src={QuestionCharacter.image} className="card-img-top img-fluid" alt={QuestionCharacter.name} />
               <div className="card-body">
                 <h2 className="card-title">{QuestionCharacter.name}</h2>
@@ -173,14 +176,17 @@ const CharacterQuiz = () => {
                 </ul>
               </div>
             </div>
+            </div>
+            <div className="col-md-6">
             <div className="mt-4">
               <p className="font-weight-bold">In which episode did this character first appear?</p>
             </div>
             <div className="options mt-3">
   {QuestionOptions.map((option, index) => (
     <div key={index} className="mb-2">
-      <button
-        className={`btn btn-outline-primary ${
+      <div class="box">
+      <button 
+        className={`button ${
           userAnswer !== null ? 'disabled' : ''
         } ${
           selectedOption === option ? 'clicked' : ''
@@ -189,9 +195,21 @@ const CharacterQuiz = () => {
       >
         {option}
       </button>
+      <div className="space">
+                              <span style={{ '--i': 31 }} className="star"></span>
+                              <span style={{ '--i': 12 }} className="star"></span>
+                              <span style={{ '--i': 57 }} className="star"></span>
+                              <span style={{ '--i': 93 }} className="star"></span>
+                              <span style={{ '--i': 23 }} className="star"></span>
+                              <span style={{ '--i': 70 }} className="star"></span>
+                              <span style={{ '--i': 6 }} className="star"></span>
+                            </div>
+      </div>
     </div>
   ))}
 </div>
+            </div>
+            </div>
 
 {userAnswer !== null && (
   <div className="mt-3 text-center">
