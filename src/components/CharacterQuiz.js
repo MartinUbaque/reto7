@@ -178,17 +178,18 @@ const CharacterQuiz = () => {
             </div>
             <div className="options mt-3">
   {QuestionOptions.map((option, index) => (
-    <button
-      key={index}
-      className={`btn btn-outline-primary ${
-        userAnswer !== null ? 'disabled' : ''
-      } ${
-        selectedOption === option ? 'clicked' : ''
-      }`} // Add the 'active' class if the option is selected
-      onClick={() => handleAnswerSelect(option)}
-    >
-      {option}
-    </button>
+    <div key={index} className="mb-2">
+      <button
+        className={`btn btn-outline-primary ${
+          userAnswer !== null ? 'disabled' : ''
+        } ${
+          selectedOption === option ? 'clicked' : ''
+        }`}
+        onClick={() => handleAnswerSelect(option)}
+      >
+        {option}
+      </button>
+    </div>
   ))}
 </div>
 
